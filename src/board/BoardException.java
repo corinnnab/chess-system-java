@@ -1,6 +1,6 @@
 package board;
 
-public class BoardException extends IllegalArgumentException{
+public class BoardException extends RuntimeException{
     public BoardException(String msg){
         super(msg);
     }
