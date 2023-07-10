@@ -1,6 +1,7 @@
 package chess;
 
 import board.Board;
+import chess.pieces.Rook;
 
 public class ChessMatch {
     private Board board;
