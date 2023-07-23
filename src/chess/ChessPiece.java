@@ -19,9 +19,6 @@ public abstract class ChessPiece extends Piece{
     public int getMoveCount() {
         return moveCount;
     }
-    public void setMoveCount(int moveCount) {
-        this.moveCount = moveCount;
-    }
 
     public ChessPosition getChessPosition(){
         return ChessPosition.fromPosition(position);
@@ -30,6 +27,14 @@ public abstract class ChessPiece extends Piece{
     protected boolean isThereOpponentPiece(Position position){
         ChessPiece p = (ChessPiece)getBoard().piece(position);
         return p != null && p.getColor() != color;
+    }
+
+    protected void increaseMoveCount(){
+        moveCount++;
+    }
+
+    protected void decreaseMoveCount(){
+        moveCount--;
     }
     
 }
